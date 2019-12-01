@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -16,49 +16,56 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="web-design.html">City Weather Data</a>
-                <button class="btn btn-info nav-item" type="button" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <a href="source_data.html" style="color:white;">Source Data</a>
-                </button>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="web-design.html">City Weather Data</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="source_data.html">Source Data</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown toggle" href="#" 
+                            id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        Plots
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="pages/temp.html">Latitude vs Max Temperature</a>
+                            <a class="dropdown-item" href="pages/humid.html">Latitude vs Humidity</a>
+                            <a class="dropdown-item" href="pages/cloud.html">Latitude vs Cloudiness</a>
+                            <a class="dropdown-item" href="pages/wind.html">Latitude vs Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="pages/comparisons.html">Compare</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
 
-                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span>Plots</span>
-                </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a href="pages/temp.html">Latitude vs Max Temperature</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/humid.html">Latitude vs Humidity</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/cloud.html">Latitude vs Cloudiness</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/wind.html">Latitude vs Wind Speed</a>
-                            </li>
-                        </ul>
-                    </div>
-            </nav>
-        
-
-        <h1>City Weather Data</h1>
-        <h2>Explanation of Project</h2>
-        <p>
-            We gathered weather data from over 500 cities around the world to 
-            determine the effect of latitude on meteorological observations.
-        </p>
-        <p>
-            Using OpenWeatherMap API, we gathered weather data from each city. We 
-            extracted readings on temperature, cloudinees, humidity, and wind speed, 
-            then compiled them into a Data Frame. Using Matplotlib, we created scatterplots to ascertain
-            possible correlations between latitude and weather data gathered.  
-        </p>
-        <p>
-            Included in this site are visualizations, explanations with analysis per visualization, as well as the source data set.
-        </p>
-
+        <div class="container-fluid" id="center-box" style="background-color: mintcream;">
+            <h1 class="display-4">Summary</h1>
+            <p>
+                We gathered weather data from over 500 cities around the world to 
+                determine the effect of latitude on meteorological observations.
+            </p>
+            <p>
+                Using OpenWeatherMap API, we gathered weather data from each city. We 
+                extracted readings on temperature, cloudinees, humidity, and wind speed, 
+                then compiled them into a Data Frame. Using Matplotlib, we created scatterplots to ascertain
+                possible correlations between latitude and weather data gathered.  
+            </p>
+            <p>
+                Included in this site are visualizations, explanations with analysis per visualization, as well as the source data set.
+            </p>
+            <div>
+                <img src="assets/Fig1.png" style="width:100%;" alt="...">
+            </div>
+        </div>
     </body>
 </html>
