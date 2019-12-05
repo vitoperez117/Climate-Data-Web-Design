@@ -46,43 +46,40 @@
             </div>
         </nav>
     
-
-        <article class="container" id="article" style="background-color: mintcream;">
-            <h1 class="display-4" style="font-size:5vw">Summary</h1>
-            <p>
-                We gathered weather data from over 500 cities around the world to 
-                determine the effect of latitude on meteorological observations.
-            </p>
-            <p>
-                Using OpenWeatherMap API, we gathered weather data from each city. We 
-                extracted readings on temperature, cloudinees, humidity, and wind speed, 
-                then compiled them into a Data Frame. Using Matplotlib, we created scatterplots to ascertain
-                possible correlations between latitude and weather data gathered.  
-            </p>
-            <p>
-                Included in this site are visualizations, explanations with analysis per visualization, as well as the source data set.
-            </p>
-            <div id="main">
-                <img src="assets/Fig1.png" style="width:85%;" alt="...">
-            </div>
-        </article>
-
-        <div class="container-fluid" id="visualizations">
-            <h3 class="text-center" style="font-size: medium;">Visualizations</h3>
+        <div>
             <div class="row">
-                <div class="col-xl-6">
-                    <img src="assets/Fig1.png" style="width:100%" alt="...">
+                <div class="col-xl-6 col-l-6 col-md-12" id="article" style="background-color: mintcream;">
+                    <h1 class="display-4" style="font-size:5vw">Overview</h1>
+                    <p>
+                        We gathered weather data from over 500 cities around the world to 
+                        determine the effect of latitude on meteorological observations.
+                    </p>
+                    <img class="main-fig" src="assets/Fig1.png" style="width:75%;" alt="...">
+                    <p class="middle-text">
+                        Using OpenWeatherMap API, we gathered weather data from each city. We 
+                        extracted readings on temperature, cloudinees, humidity, and wind speed, 
+                        then compiled them into a Data Frame. Using Matplotlib, we created scatterplots to ascertain
+                        possible correlations between latitude and weather data gathered. 
+                        This site provides visualizations, explanations, analysis, and source data set.
+                    </p>
                 </div>
-                <div class="col-xl-6">
-                    <img src="assets/Fig2.png" style="width:100%" alt="...">
-                </div>
-            
-            
-                <div class="col-xl-6">
-                    <img src="assets/Fig3.png" style="width:100%" alt="...">
-                </div>
-                <div class="col-xl-6">
-                    <img src="assets/Fig4.png" style="width:100%" alt="...">
+    
+                <div class="col-xl-6 col-l-6 col-md-12" id="visualizations" style="background-color: mintcream;">
+                    <h3 class="text-center" style="font-size: medium;">Visualizations</h3>
+                    <div class="row" style="background-color: mintcream;">
+                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                            <img id="fig1" src="assets/Fig1.png" style="width:100%" alt="...">
+                        </div>
+                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                            <img src="assets/Fig2.png" style="width:100%" alt="...">
+                        </div>
+                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                            <img src="assets/Fig3.png" style="width:100%" alt="...">
+                        </div>
+                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                            <img src="assets/Fig4.png" style="width:100%" alt="...">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
