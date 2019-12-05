@@ -15,73 +15,75 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="web-design.html">City Weather Data</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="source_data.html">Source Data</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown toggle" href="#" 
-                            id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                        Plots
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="pages/temp.html">Latitude vs Max Temperature</a>
-                            <a class="dropdown-item" href="pages/humid.html">Latitude vs Humidity</a>
-                            <a class="dropdown-item" href="pages/cloud.html">Latitude vs Cloudiness</a>
-                            <a class="dropdown-item" href="pages/wind.html">Latitude vs Wind Speed</a>
-                        </div>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="nav-link" href="pages/comparisons.html">Compare</a>
-                    </li>
-                </ul>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="web-design.html">City Weather Data</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="source_data.html">Source Data</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown toggle" href="#" 
+                        id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pages/temp.html">Latitude vs Max Temperature</a>
+                        <a class="dropdown-item" href="pages/humid.html">Latitude vs Humidity</a>
+                        <a class="dropdown-item" href="pages/cloud.html">Latitude vs Cloudiness</a>
+                        <a class="dropdown-item" href="pages/wind.html">Latitude vs Wind Speed</a>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" href="pages/comparisons.html">Compare</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div class="row" id="article-container">
+            <div class="col-xl-6 col-l-6 col-md-12" id="article" style="background-color: mintcream;">
+                <h1 class="display-4" style="font-size:5vw">Overview</h1>
+                <p>
+                    We gathered weather data from over 500 cities around the world to 
+                    determine the effect of latitude on meteorological observations.
+                </p>
+                <img class="main-fig" src="assets/Fig1.png" style="width:75%;" alt="...">
+                <p class="middle-text">
+                    Using OpenWeatherMap API, we gathered weather data from each city. We 
+                    extracted readings on temperature, cloudinees, humidity, and wind speed, 
+                    then compiled them into a Data Frame. Using Matplotlib, we created scatterplots to ascertain
+                    possible correlations between latitude and weather data gathered. 
+                    This site provides visualizations, explanations, analysis, and source data set.
+                </p>
             </div>
-        </nav>
-    
-        <div>
-            <div class="row">
-                <div class="col-xl-6 col-l-6 col-md-12" id="article" style="background-color: mintcream;">
-                    <h1 class="display-4" style="font-size:5vw">Overview</h1>
-                    <p>
-                        We gathered weather data from over 500 cities around the world to 
-                        determine the effect of latitude on meteorological observations.
-                    </p>
-                    <img class="main-fig" src="assets/Fig1.png" style="width:75%;" alt="...">
-                    <p class="middle-text">
-                        Using OpenWeatherMap API, we gathered weather data from each city. We 
-                        extracted readings on temperature, cloudinees, humidity, and wind speed, 
-                        then compiled them into a Data Frame. Using Matplotlib, we created scatterplots to ascertain
-                        possible correlations between latitude and weather data gathered. 
-                        This site provides visualizations, explanations, analysis, and source data set.
-                    </p>
-                </div>
-    
-                <div class="col-xl-6 col-l-6 col-md-12" id="visualizations" style="background-color: mintcream;">
-                    <h3 class="text-center" style="font-size: medium;">Visualizations</h3>
-                    <div class="row" style="background-color: mintcream;">
-                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
-                            <img id="fig1" src="assets/Fig1.png" style="width:100%" alt="...">
-                        </div>
-                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
-                            <img src="assets/Fig2.png" style="width:100%" alt="...">
-                        </div>
-                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
-                            <img src="assets/Fig3.png" style="width:100%" alt="...">
-                        </div>
-                        <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
-                            <img src="assets/Fig4.png" style="width:100%" alt="...">
-                        </div>
+
+            <div class="col-xl-6 col-l-6 col-md-12" id="visualizations" style="background-color: mintcream;">
+                <h3 class="text-center" style="font-size:larger;">Visualizations</h3>
+                <div class="row" style="background-color: mintcream;">
+                    <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                        <img src="assets/Fig1.png" style="width:100%" alt="...">
+                    </div>
+                    <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                        <img src="assets/Fig2.png" style="width:100%" alt="...">
+                    </div>
+                    <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                        <img src="assets/Fig3.png" style="width:100%" alt="...">
+                    </div>
+                    <div class="col-xl-6 col-l-6 col-sm-3" id="plots">
+                        <img src="assets/Fig4.png" style="width:100%" alt="...">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <footer></footer>
     </body>
 </html>
