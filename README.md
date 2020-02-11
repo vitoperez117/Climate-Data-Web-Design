@@ -1,4 +1,4 @@
-# Web-Design-Challenge
+# Climate-Data-Web-Design
 
 ## Contents
 
